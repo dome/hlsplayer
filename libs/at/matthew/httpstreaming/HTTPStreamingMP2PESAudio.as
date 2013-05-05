@@ -73,10 +73,10 @@
 				
 				value = packet.readUnsignedInt();
 				packet.position -= 4;
-				if(packet.readUnsignedInt() != 0x1c0)
-				{
-						throw new Error("PES start code not found or not AAC/AVC");
-				}
+//				if(packet.readUnsignedInt() != 0x1c0)
+//				{
+//						throw new Error("PES start code not found or not AAC/AVC");
+//				}
 				// Ignore packet length and marker bits.
 				packet.position += 3;
 				// need PTS only
